@@ -2,7 +2,9 @@
 
 > This is a full functioning prototype. Currently at v1.0.0. If you have suggestions or improvements please send an email or open an issue on GitHub. Thank you!
 
-## **My Life Management App** is a comprehensive, minimalist productivity tool designed to help you organize and streamline your daily tasks and long-term goals. Built with simplicity in mind, this application integrates various productivity methodologies and tools into an desktop app
+### My Life Management App is a comprehensive, minimalist productivity tool designed to help you organize and streamline your daily tasks and long-term goals. Built with simplicity in mind, this application integrates various productivity methodologies and tools into an desktop app
+
+---
 
 ![Alt text](page.png "Title")
 
@@ -20,7 +22,7 @@
 
 **Download the Latest Windows (.exe) Release**:
 
-- Visit the [Releases page](https://github.com/your-username/my-life-management/releases) to download the latest version of the application.
+- Visit the [Releases page](https://github.com/rayan2162/my-day-management-app/releases/tag/v_1.0.0) to download the latest version of the application.
 
 ## Installation
 
@@ -29,13 +31,13 @@
 1. **Clone the Repository**:
 
     ```bash
-    git clone https://github.com/your-username/my-life-management.git
+    git clone https://github.com/rayan2162/my-day-management-app.git
     ```
 
     **Navigate to the Project Directory**:
 
     ```bash
-    cd my-life-management
+    cd my-life-management-app
     ```
 
 2. **Install Dependencies**:
@@ -112,3 +114,6 @@ This command creates an installer or executable file for your platform.
 ## License
 
 This project is licensed under the MIT License.
+
+
+#### Thank you for using My Life Management App.
