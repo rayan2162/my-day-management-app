@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Day Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- First Box: Calendar -->
+        <div class="box size-1">
+            <div class="calendar" id="calendar">
+                <h1>Calendar</h1>
+                <div class="calendar-controls">
+                    <button onclick="prevMonth()">&#9664;</button>
+                    <span id="monthYear"></span>
+                    <button onclick="nextMonth()">&#9654;</button>
+                </div>
+                <div class="days-of-week">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>T</span>
+                    <span>W</span>
+                    <span>T</span>
+                    <span>F</span>
+                    <span>S</span>
+                </div>
+                <div class="calendar-days" id="calendarDays"></div>
+            </div>
+        </div>
+
+        <!-- Second Box: To-Do List -->
+        <div class="box size-2">
+            <div class="todo">
+                <h1>To-Do</h1>
+                <input type="text" id="todoInput" placeholder="Add a new task...">
+                <button onclick="addTask()">Add Task</button>
+                <div class="todo-content">
+                    <br>
+                    <ul id="todoList"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Box: Checklist -->
+<div class="box size-3">
+    <div class="checklist">
+        <h1>Important</h1>
+        <input type="text" id="checklist1Input" placeholder="Add a new task...">
+        <button onclick="addChecklist1Task()">Add Task</button>
+        <ul id="checklist1List">
+            <br>
+        </ul>
+    </div>
+</div>
+
+<!-- Fourth Box: Checklist (Duplicate) -->
+<div class="box size-3">
+    <div class="checklist">
+        <h1>Habit</h1>
+        <input type="text" id="checklist2Input" placeholder="Add a new task...">
+        <button onclick="addChecklist2Task()">Add Habit</button>
+        <ul id="checklist2List">
+            <br>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Fifth Box: Note Area -->
+<div class="box size-4 span-two-rows">
+    <div class="hello-world-box">
+        <span id="currentTime"></span> <!-- This will display the current time -->
+        <br>
+        <span id="currentDate"></span> <!-- This will display the current date -->
+    </div>
+    <h1>Notes</h1>
+    <textarea id="notesArea" placeholder="Write your notes here..."></textarea>
+    <button onclick="saveNotes()">Save Notes</button>
+</div>
+
+
+
+        <!-- Sixth Box: Timers -->
+        <div class="box">
+            <h1 style="margin-top: 0px;">Timers</h1>
+            <div class="timer">
+                <h2>Work Timer (25 mins)</h2>
+                <p id="workTimer">25:00</p>
+                <button onclick="startWorkTimer()">Start</button>
+                <button onclick="pauseWorkTimer()">Pause</button>
+                <button onclick="resetWorkTimer()">Reset</button>
+            </div>
+            <div class="timer">
+                <h2>Break Timer (5 mins)</h2>
+                <p id="breakTimer">05:00</p>
+                <button onclick="startBreakTimer()">Start</button>
+                <button onclick="pauseBreakTimer()">Pause</button>
+                <button onclick="resetBreakTimer()">Reset</button>
+            </div>
+        </div>
+
+        <!-- Seventh Box: Eisenhower Matrix -->
+        <div class="box size-6 span-two-cols">
+            <div class="eisenhower-grid">
+                <div class="matrix-box">
+                    <h3>Today & Important</h3>
+                    <div class="matrix-box-content">
+                        <input type="text" id="urgentImportantInput" placeholder="Add a task...">
+                        <br><br>
+                        <button onclick="addUrgentImportantTask()">Add</button>
+                        <ul id="urgentImportantList"></ul>
+                    </div>
+                </div>
+                <div class="matrix-box">
+                    <h3>This Week</h3>
+                    <div class="matrix-box-content">
+                        <input type="text" id="notUrgentImportantInput" placeholder="Add a task...">
+                        <br><br>
+                        <button onclick="addNotUrgentImportantTask()">Add</button>
+                        <ul id="notUrgentImportantList"></ul>
+                    </div>
+                </div>
+                <div class="matrix-box">
+                    <h3>Upcoming</h3>
+                    <div class="matrix-box-content">
+                        <input type="text" id="urgentNotImportantInput" placeholder="Add a task...">
+                        <br><br>
+                        <button onclick="addUrgentNotImportantTask()">Add</button>
+                        <ul id="urgentNotImportantList"></ul>
+                    </div>
+                </div>
+                <div class="matrix-box">
+                    <h3>Side Quest</h3>
+                    <div class="matrix-box-content">
+                        <input type="text" id="notUrgentNotImportantInput" placeholder="Add a task...">
+                        <br><br>
+                        <button onclick="addNotUrgentNotImportantTask()">Add</button>
+                        <ul id="notUrgentNotImportantList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

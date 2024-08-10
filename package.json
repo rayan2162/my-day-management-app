@@ -1,0 +1,31 @@
+{
+  "name": "my-day-management-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.mydaymanagement.app",
+    "productName": "My Day Management app",
+    "files": [
+      "index.html",
+      "styles.css",
+      "script.js",
+      "main.js",
+      "preload.js",
+      "logo.ico",
+      "alarm.mp3"
+    ]
+  },
+  "keywords": [],
+  "author": "Rayanul Kader Chowdhury Abid",
+  "license": "MIT",
+  "description": "My Life Management is a minimalist productivity tool designed to help you organize and streamline your daily tasks and long-term goals.",
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  }
+}
