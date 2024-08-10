@@ -2,7 +2,7 @@
 
 > This is a full functioning prototype. Currently at v1.0.0. If you have suggestions or improvements please send an email or open an issue on GitHub. Thank you!
 
-## My Life Management App is a comprehensive, minimalist productivity tool designed to help you organize and streamline your daily tasks and long-term goals. Built with simplicity in mind, this application integrates various productivity methodologies and tools into an desktop app
+### My Life Management App is a comprehensive, minimalist productivity tool designed to help you organize and streamline your daily tasks and long-term goals. Built with simplicity in mind, this application integrates various productivity methodologies and tools into an desktop app
 
 ---
 
