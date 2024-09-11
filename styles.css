@@ -1,303 +1,307 @@
-body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f5f5;
+body,
+html {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  box-sizing: border-box;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-    padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Five equal columns */
+  grid-template-rows: repeat(2, 1fr); /* Two equal rows */
+  gap: 5px; /* Small gap between items */
+  padding: 10px;
+  min-height: 100vh; /* Full viewport height */
+  box-sizing: border-box;
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #e0e0e0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 345px; /* Default height */
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #e0e0e0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%; /* Stretch to fill the available height */
+  overflow: hidden;
 }
 
 .size-4 {
-    height: 700px;
+  height: 100%; /* Allow the element to naturally stretch */
 }
 
 .span-two-rows {
-    grid-row: span 2;
+  grid-row: span 2;
 }
 
 .span-two-cols {
-    grid-column: span 3;
-    grid-row: span 2;
+  grid-column: span 3;
+  grid-row: span 2;
 }
 
 button {
-    background-color: black;
-    color: white;
-    border: solid black;
-    border-radius: 5px;
-    padding: 2px;
-    width: 30%;
+  background-color: black;
+  color: white;
+  border: solid black;
+  border-radius: 5px;
+  padding: 2px;
+  width: 30%;
 }
 
 input {
-    border: solid black 1px;
-    border-radius: 5px;
-    padding: 3px;
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 3px;
 }
 
 /* Calendar */
 .today {
-    font-weight: bolder;
-    color: black;
-    font-size: 1.3em;
+  font-weight: bolder;
+  color: black;
+  font-size: 1.3em;
 }
 
 .calendar {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
 }
 
 .calendar-controls {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .days-of-week {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 5px;
 }
 
 .days-of-week span {
-    border-radius: 5px;
-    text-align: center;
-    padding: 5px;
-    background-color: black;
-    border: 1px solid black;
-    color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
 }
 
 .calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
 }
 
 .calendar-days span {
-    padding: 5px;
-    background-color: #fff;
-    border: 0.5px solid black;
-    border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  border: 0.5px solid black;
+  border-radius: 5px;
 }
 
 /* Checklist */
 .checklist {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .checklist-content {
-    flex: 1;
-    overflow-y: auto;
-    overflow-x: auto;
-    padding-right: 10px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding-right: 10px;
 }
 
 .checklist input[type="text"] {
-    width: calc(100% - 22px);
-    margin-bottom: 10px;
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
 }
 
 .checklist ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .checklist li {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .checklist .delete-btn {
-    background: none;
-    border: none;
-    color: black;
-    font-weight: bolder;
-    cursor: pointer;
-    margin-left: 10px;
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
 textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-    padding: 5px;
-    box-sizing: border-box;
-    border: solid black 1px;
-    border-radius: 5px;
-    height: 500px;
+  width: 100%;
+  height: 37vw;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: solid black 1px;
+  border-radius: 5px;
 }
 
+/* Eisenhower Matrix */
 .eisenhower-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5px;
-    height: 100%;
-    overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .matrix-box {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    height: 93%;
-    overflow-y: auto;
-    border-radius: 7px;
-    width: 185px;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
 }
 
 .matrix-box h3 {
-    text-align: center;
-    margin-top: 0;
+  text-align: center;
+  margin-top: 1em;
 }
 
 .matrix-box-content {
-    flex: 1;
-    overflow-y: auto;
-    overflow-x: auto;
-    padding-right: 10px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 10px;
+  width: 13vw;
 }
 
 .delete-btn {
-    background: none;
-    border: none;
-    color: black;
-    font-weight: bolder;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
 .todo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .todo-content {
-    flex: 1;
-    overflow-y: auto;
-    overflow-x: auto;
-    padding-right: 10px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding-right: 10px;
 }
 
 .todo input[type="text"] {
-    width: calc(100% - 22px);
-    margin-bottom: 10px;
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
 }
 
 .todo ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .todo li {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .todo .delete-btn {
-    margin-left: 5px;
-    color: black;
+  margin-left: 5px;
+  color: black;
 }
 
 .hello-world-box {
-    border: 1px solid black; /* Black border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px; /* Padding inside the box */
-    text-align: center; /* Center the text */
-    width: 100%; /* Full width of the parent */
-    box-sizing: border-box;
-    background-color: black;
-    color: white;
-    font-size: 20px;
+  border: 1px solid black; /* Black border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 5px; /* Padding inside the box */
+  text-align: center; /* Center the text */
+  width: 90%; /* Full width of the parent */
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-size: 2rem;
 }
 
 .hello-world-box p {
-    margin: 0; /* Remove default paragraph margins */
+  margin: 0; /* Remove default paragraph margins */
 }
 
 /* Styles for mobile view */
 @media (max-width: 1200px) {
-    .container {
-        grid-template-columns: 1fr; /* Single column layout */
-        grid-template-rows: auto; /* Automatic row heights */
-        gap: 5px; /* Reduced gap */
-    }
-    
-    .box {
-        width: 100%; /* Full width of container */
-        height: auto; /* Automatic height */
-    }
+  .container {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: auto; /* Automatic row heights */
+    gap: 5px; /* Reduced gap */
+  }
 
-    .calendar {
-        grid-column: span 1;
-    }
+  .box {
+    width: 100%; /* Full width of container */
+    height: auto; /* Automatic height */
+  }
 
-    .todo {
-        grid-column: span 1;
-    }
+  .calendar {
+    grid-column: span 1;
+  }
 
-    .timer {
-        grid-column: span 1;
-    }
+  .todo {
+    grid-column: span 1;
+  }
 
-    .size-4 {
-        grid-column: span 1;
-    }
+  .timer {
+    grid-column: span 1;
+  }
 
-    .eisenhower-grid {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(4, auto);
-    }
+  .size-4 {
+    grid-column: span 1;
+  }
 
-    .matrix-box {
-        width: 100%;
-        height: auto;
-    }
+  .eisenhower-grid {
+    grid-template-columns: 1fr; /* Stack columns vertically */
+    grid-template-rows: repeat(4, auto); /* Adjust rows for mobile */
+  }
 
-    .span-two-cols {
-        grid-column: span 1;
-    }
+  .matrix-box {
+    width: 100%;
+    height: auto;
+  }
 
-    .span-two-rows {
-        grid-row: span 1;
-    }
+  .span-two-cols {
+    grid-column: span 1;
+  }
+
+  .span-two-rows {
+    grid-row: span 1;
+  }
 }
