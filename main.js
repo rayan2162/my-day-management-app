@@ -5,7 +5,7 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
-    icon: path.join(__dirname, 'logo.ico'), // Set your icon here
+    icon: path.join(__dirname, 'app_logo.ico'), // Set your icon here
     webPreferences: {
       nodeIntegration: true,
     },
